@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <nvidia_smi_log>
-	<timestamp>Mon Nov 30 12:31:12 2020</timestamp>
+	<timestamp>Fri Dec  4 18:03:26 2020</timestamp>
 	<driver_version>455.45.01</driver_version>
 	<cuda_version>11.1</cuda_version>
 	<attached_gpus>1</attached_gpus>
@@ -54,7 +54,7 @@
 			<pci_gpu_link_info>
 				<pcie_gen>
 					<max_link_gen>2</max_link_gen>
-					<current_link_gen>1</current_link_gen>
+					<current_link_gen>2</current_link_gen>
 				</pcie_gen>
 				<link_widths>
 					<max_link_width>4x</max_link_width>
@@ -67,11 +67,11 @@
 			</pci_bridge_chip>
 			<replay_counter>0</replay_counter>
 			<replay_rollover_counter>0</replay_rollover_counter>
-			<tx_util>325000 KB/s</tx_util>
-			<rx_util>4000 KB/s</rx_util>
+			<tx_util>231000 KB/s</tx_util>
+			<rx_util>8000 KB/s</rx_util>
 		</pci>
 		<fan_speed>N/A</fan_speed>
-		<performance_state>P8</performance_state>
+		<performance_state>P0</performance_state>
 		<clocks_throttle_reasons>
 			<clocks_throttle_reason_gpu_idle>Not Active</clocks_throttle_reason_gpu_idle>
 			<clocks_throttle_reason_applications_clocks_setting>Not Active</clocks_throttle_reason_applications_clocks_setting>
@@ -85,8 +85,8 @@
 		</clocks_throttle_reasons>
 		<fb_memory_usage>
 			<total>2004 MiB</total>
-			<used>192 MiB</used>
-			<free>1812 MiB</free>
+			<used>196 MiB</used>
+			<free>1808 MiB</free>
 		</fb_memory_usage>
 		<bar1_memory_usage>
 			<total>256 MiB</total>
@@ -95,8 +95,8 @@
 		</bar1_memory_usage>
 		<compute_mode>Default</compute_mode>
 		<utilization>
-			<gpu_util>28 %</gpu_util>
-			<memory_util>15 %</memory_util>
+			<gpu_util>12 %</gpu_util>
+			<memory_util>5 %</memory_util>
 			<encoder_util>N/A</encoder_util>
 			<decoder_util>N/A</decoder_util>
 		</utilization>
@@ -174,7 +174,7 @@
 		</retired_pages>
 		<remapped_rows>N/A</remapped_rows>
 		<temperature>
-			<gpu_temp>50 C</gpu_temp>
+			<gpu_temp>51 C</gpu_temp>
 			<gpu_temp_max_threshold>99 C</gpu_temp_max_threshold>
 			<gpu_temp_slow_threshold>94 C</gpu_temp_slow_threshold>
 			<gpu_temp_max_gpu_threshold>90 C</gpu_temp_max_gpu_threshold>
@@ -182,7 +182,7 @@
 			<gpu_temp_max_mem_threshold>N/A</gpu_temp_max_mem_threshold>
 		</temperature>
 		<power_readings>
-			<power_state>P8</power_state>
+			<power_state>P0</power_state>
 			<power_management>N/A</power_management>
 			<power_draw>N/A</power_draw>
 			<power_limit>N/A</power_limit>
@@ -192,10 +192,10 @@
 			<max_power_limit>N/A</max_power_limit>
 		</power_readings>
 		<clocks>
-			<graphics_clock>336 MHz</graphics_clock>
-			<sm_clock>336 MHz</sm_clock>
-			<mem_clock>405 MHz</mem_clock>
-			<video_clock>329 MHz</video_clock>
+			<graphics_clock>1124 MHz</graphics_clock>
+			<sm_clock>1124 MHz</sm_clock>
+			<mem_clock>900 MHz</mem_clock>
+			<video_clock>1101 MHz</video_clock>
 		</clocks>
 		<applications_clocks>
 			<graphics_clock>1032 MHz</graphics_clock>
@@ -611,7 +611,7 @@
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>913</pid>
+				<pid>918</pid>
 				<type>G</type>
 				<process_name>/usr/lib/xorg/Xorg</process_name>
 				<used_memory>20 MiB</used_memory>
@@ -619,47 +619,31 @@
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>1285</pid>
+				<pid>24870</pid>
 				<type>G</type>
 				<process_name>/usr/lib/xorg/Xorg</process_name>
-				<used_memory>90 MiB</used_memory>
+				<used_memory>100 MiB</used_memory>
 			</process_info>
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>1472</pid>
+				<pid>25068</pid>
 				<type>G</type>
 				<process_name>/usr/bin/kwin_x11</process_name>
-				<used_memory>35 MiB</used_memory>
+				<used_memory>31 MiB</used_memory>
 			</process_info>
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>1474</pid>
+				<pid>25078</pid>
 				<type>G</type>
 				<process_name>/usr/bin/plasmashell</process_name>
-				<used_memory>27 MiB</used_memory>
+				<used_memory>29 MiB</used_memory>
 			</process_info>
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>9767</pid>
-				<type>G</type>
-				<process_name>/usr/lib/firefox/firefox</process_name>
-				<used_memory>0 MiB</used_memory>
-			</process_info>
-			<process_info>
-				<gpu_instance_id>N/A</gpu_instance_id>
-				<compute_instance_id>N/A</compute_instance_id>
-				<pid>9837</pid>
-				<type>G</type>
-				<process_name>/usr/lib/firefox/firefox</process_name>
-				<used_memory>0 MiB</used_memory>
-			</process_info>
-			<process_info>
-				<gpu_instance_id>N/A</gpu_instance_id>
-				<compute_instance_id>N/A</compute_instance_id>
-				<pid>10024</pid>
+				<pid>27691</pid>
 				<type>G</type>
 				<process_name>/usr/lib/firefox/firefox</process_name>
 				<used_memory>0 MiB</used_memory>
