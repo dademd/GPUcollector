@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <nvidia_smi_log>
-	<timestamp>Fri Dec  4 18:03:26 2020</timestamp>
+	<timestamp>Tue Dec  8 13:47:24 2020</timestamp>
 	<driver_version>455.45.01</driver_version>
 	<cuda_version>11.1</cuda_version>
 	<attached_gpus>1</attached_gpus>
@@ -67,8 +67,8 @@
 			</pci_bridge_chip>
 			<replay_counter>0</replay_counter>
 			<replay_rollover_counter>0</replay_rollover_counter>
-			<tx_util>231000 KB/s</tx_util>
-			<rx_util>8000 KB/s</rx_util>
+			<tx_util>0 KB/s</tx_util>
+			<rx_util>0 KB/s</rx_util>
 		</pci>
 		<fan_speed>N/A</fan_speed>
 		<performance_state>P0</performance_state>
@@ -85,18 +85,18 @@
 		</clocks_throttle_reasons>
 		<fb_memory_usage>
 			<total>2004 MiB</total>
-			<used>196 MiB</used>
-			<free>1808 MiB</free>
+			<used>184 MiB</used>
+			<free>1820 MiB</free>
 		</fb_memory_usage>
 		<bar1_memory_usage>
 			<total>256 MiB</total>
-			<used>5 MiB</used>
-			<free>251 MiB</free>
+			<used>6 MiB</used>
+			<free>250 MiB</free>
 		</bar1_memory_usage>
 		<compute_mode>Default</compute_mode>
 		<utilization>
-			<gpu_util>12 %</gpu_util>
-			<memory_util>5 %</memory_util>
+			<gpu_util>0 %</gpu_util>
+			<memory_util>0 %</memory_util>
 			<encoder_util>N/A</encoder_util>
 			<decoder_util>N/A</decoder_util>
 		</utilization>
@@ -174,7 +174,7 @@
 		</retired_pages>
 		<remapped_rows>N/A</remapped_rows>
 		<temperature>
-			<gpu_temp>51 C</gpu_temp>
+			<gpu_temp>55 C</gpu_temp>
 			<gpu_temp_max_threshold>99 C</gpu_temp_max_threshold>
 			<gpu_temp_slow_threshold>94 C</gpu_temp_slow_threshold>
 			<gpu_temp_max_gpu_threshold>90 C</gpu_temp_max_gpu_threshold>
@@ -192,10 +192,10 @@
 			<max_power_limit>N/A</max_power_limit>
 		</power_readings>
 		<clocks>
-			<graphics_clock>1124 MHz</graphics_clock>
-			<sm_clock>1124 MHz</sm_clock>
+			<graphics_clock>562 MHz</graphics_clock>
+			<sm_clock>562 MHz</sm_clock>
 			<mem_clock>900 MHz</mem_clock>
-			<video_clock>1101 MHz</video_clock>
+			<video_clock>550 MHz</video_clock>
 		</clocks>
 		<applications_clocks>
 			<graphics_clock>1032 MHz</graphics_clock>
@@ -611,7 +611,7 @@
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>918</pid>
+				<pid>975</pid>
 				<type>G</type>
 				<process_name>/usr/lib/xorg/Xorg</process_name>
 				<used_memory>20 MiB</used_memory>
@@ -619,34 +619,42 @@
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>24870</pid>
+				<pid>1403</pid>
 				<type>G</type>
 				<process_name>/usr/lib/xorg/Xorg</process_name>
-				<used_memory>100 MiB</used_memory>
+				<used_memory>94 MiB</used_memory>
 			</process_info>
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>25068</pid>
+				<pid>1601</pid>
 				<type>G</type>
 				<process_name>/usr/bin/kwin_x11</process_name>
-				<used_memory>31 MiB</used_memory>
+				<used_memory>23 MiB</used_memory>
 			</process_info>
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>25078</pid>
+				<pid>1610</pid>
 				<type>G</type>
 				<process_name>/usr/bin/plasmashell</process_name>
-				<used_memory>29 MiB</used_memory>
+				<used_memory>18 MiB</used_memory>
 			</process_info>
 			<process_info>
 				<gpu_instance_id>N/A</gpu_instance_id>
 				<compute_instance_id>N/A</compute_instance_id>
-				<pid>27691</pid>
+				<pid>7588</pid>
 				<type>G</type>
-				<process_name>/usr/lib/firefox/firefox</process_name>
-				<used_memory>0 MiB</used_memory>
+				<process_name>/snap/intellij-idea-community/267/jbr/lib/jcef_helper --type=gpu-process --field-trial-handle=132435946712500448,3826353178087257236,131072 --enable-features=CastMediaRouteProvider --disable-features=SpareRendererForSitePerProcess --no-sandbox --locales-dir-path=/snap/intellij-idea-community/267/jbr/lib/locales --log-file=/home/danila/jcef_6803.log --log-severity=disable --resources-dir-path=/snap/intellij-idea-community/267/jbr/lib --lang=en-US --gpu-preferences=MAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAAABgAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA= --disable-in-process-stack-traces --log-file=/home/danila/jcef_6803.log --shared-files</process_name>
+				<used_memory>9 MiB</used_memory>
+			</process_info>
+			<process_info>
+				<gpu_instance_id>N/A</gpu_instance_id>
+				<compute_instance_id>N/A</compute_instance_id>
+				<pid>8739</pid>
+				<type>G</type>
+				<process_name>/usr/bin/plasma-discover</process_name>
+				<used_memory>1 MiB</used_memory>
 			</process_info>
 		</processes>
 		<accounted_processes>

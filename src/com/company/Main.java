@@ -18,20 +18,20 @@ public class Main {
 //    A class for storing information about processes
     static class Process{
 
-        public Process(String pid, int usedMemory){
+        public Process(String pid, double gpu_usage){
             this.pid = pid;
-            this.usedMemory = usedMemory;
+            this.gpu_usage = gpu_usage;
         }
 //        process id
         String pid;
-//        used gpu memory in MiB
-        int usedMemory;
+//        estimated gpu usage in %
+        double gpu_usage;
 
         @Override
         public String toString() {
             return "Process{" +
                     "pid='" + pid + '\'' +
-                    ", usedMemory='" + usedMemory + '\'' +
+                    ", gpu_usage='" + gpu_usage + '\'' +
                     '}';
         }
     }
@@ -64,9 +64,21 @@ public class Main {
 //        Normalize the XML Structure; It's just too important !!
         document.getDocumentElement().normalize();
 
-//        Here comes the root node
-        Element root = document.getDocumentElement();
-//        System.out.println(root.getNodeName());
+//        total size of GPUmemory
+        double total_memory = Double.MAX_VALUE;
+
+//        Get GPU information
+        NodeList gpu_infos = document.getElementsByTagName("fb_memory_usage");
+        for(int i = 0; i < gpu_infos.getLength(); ++i){
+            Node node = gpu_infos.item(i);
+
+            if(node.getNodeType() == Node.ELEMENT_NODE){
+                Element gpu_info = (Element) node;
+                String gpu_total = gpu_info.getElementsByTagName("total").item(0).getTextContent();
+                total_memory = Integer.parseInt(gpu_total.substring(0, gpu_total.length() - 4));
+                break;
+            }
+        }
 
 //        Get all processes's information nodelist
         NodeList proc_infos = document.getElementsByTagName("process_info");
@@ -87,8 +99,8 @@ public class Main {
                 int used_memory = Integer.parseInt(used_memory_str.substring(0, used_memory_str.length() - 4));
 //                get pid of a process
                 String pid = proc_info.getElementsByTagName("pid").item(0).getTextContent();
-//                add new process information to the list
-                processes.add(new Process(pid, used_memory));
+//                add new process information to the list (pid, gpu usage in %)
+                processes.add(new Process(pid, 100 * used_memory / total_memory));
             }
         }
 //        return list with all processses' information
