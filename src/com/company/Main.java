@@ -96,11 +96,13 @@ public class Main {
 //                get used memory in format 12 MiB
                 String used_memory_str = proc_info.getElementsByTagName("used_memory").item(0).getTextContent();
 //                truncate, extract and save integer part
-                int used_memory = Integer.parseInt(used_memory_str.substring(0, used_memory_str.length() - 4));
+                double used_memory = Double.parseDouble(used_memory_str.substring(0, used_memory_str.length() - 4));
 //                get pid of a process
                 String pid = proc_info.getElementsByTagName("pid").item(0).getTextContent();
 //                add new process information to the list (pid, gpu usage in %)
-                processes.add(new Process(pid, 100 * used_memory / total_memory));
+                used_memory = 100 * used_memory / total_memory;
+                used_memory = Math.round(used_memory * 1000) / 1000.;
+                processes.add(new Process(pid, used_memory));
             }
         }
 //        return list with all processses' information
